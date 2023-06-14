@@ -10,8 +10,9 @@ function Employee( fullName , department , level , imageUrl ) {
     this.level = level;
     this.imageUrl = imageUrl;
     this.salary = this.calculatSalary();
-    this.netSalary = 0 ;
+    this.netSalary = this.netSalary ;
     allEmployee.push(this);
+    saveDataLocal(allEmployee);
   }
 
   Employee.prototype.calculatSalary = function(){
@@ -36,15 +37,6 @@ function Employee( fullName , department , level , imageUrl ) {
   
 
 
-//   Employee.prototype.generateUniqueId = function(){
-//     this.employeeID = 1;
-//     return function() {
-//       return (this.employeeID++).toString().padStart(4, '0');
-//     }
-    
-//   }
-
-
 function randomSalary(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
@@ -66,9 +58,32 @@ Employee.prototype.render = function(){
     divEle.appendChild(h3Ele1);
 
     let h3Ele2 = document.createElement("h3");
-    h3Ele2.textContent = `Salary : ${this.salary}`
+    h3Ele2.textContent = `Salary : ${this.salary} JD`
     divEle.appendChild(h3Ele2);
 }
+
+// Function to save data in local storage
+
+function saveDataLocal(empArr) {
+    let stringArr = JSON.stringify(empArr);
+    localStorage.setItem("employee", stringArr);
+  //  console.log(stringArr);
+  }
+
+// // Function to get Object in Local Storage
+
+ function getDataLocal(){
+     let retArr = localStorage.getItem("employee");
+     let objArr = JSON.parse(retArr);
+    // console.log(objArr);
+    for (let i = 0; i < objArr.length; i++) {
+        new Employee (objArr[i].fullName , objArr[i].department , objArr[i].level , objArr[i].imageUrl);
+    } 
+}
+    if(localStorage.getItem("employee")){
+        getDataLocal();
+    }
+
 
 form.addEventListener("submit", submitHandler);
 function submitHandler(event){
@@ -77,12 +92,13 @@ function submitHandler(event){
     let empDept = event.target.department.value;
     let empLvl = event.target.level.value;
     let empUrl = event.target.img.value;
-    let newEmp = new Employee(empName,empDept,empLvl,empUrl , 1000);
+    let newEmp = new Employee(empName,empDept,empLvl,empUrl);
     newEmp.calculatSalary();
     newEmp.render();
+    console.log(allEmployee);
 }
 
 for (let i = 0; i < allEmployee.length; i++) {
     allEmployee[i].render();
 }
- 
+

@@ -1,6 +1,7 @@
 body{
   margin: 20px;
   background-color: #ecf6f9;
+
 }
 
 header{
@@ -24,7 +25,7 @@ header div{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 8px;
+  margin-left: 15px;
 }
 
 #navBar{
@@ -35,6 +36,7 @@ header div{
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  list-style: none;
 }
 /* Main */
 #empForm{
@@ -92,7 +94,15 @@ main section div {
   align-items: center;
   border-radius: 5px;
   box-shadow:6px 6px 15px 5px #146C94;
+
 }
+/* Main - section - div */
+main section{
+  margin: 10px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
 
 main section div img{
   border-radius: 50%;
@@ -110,17 +120,25 @@ footer div{
   display: flex;
   align-items: center;
 }
+
 footer ul{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  /* flex-direction: row; */
+  justify-content: space-evenly;
   width: 70%;
+  list-style: none;
+
 }
 
 #links a , footer h3{
   color: #F6F1F1;
   text-decoration: none;
-  font-size: x-large;
+  font-size: larger;
+
+}
+#copyright h3{
+  width: 100%;
+  text-align: center;
 }
 #copyright h3{
   width: 100%;

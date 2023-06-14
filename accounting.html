@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/rest.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>accounting Page</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/table.css">
+    <title>Accounting Page</title>
 </head>
 <body>
+
     <header>
         <div id="logo">
             <img src="./assets/profileLogo.png" alt="profileLogo" height="100px" width="100">
@@ -23,8 +24,35 @@
         </div>
     </header>
 
-    <main>
 
+    <main>
+        <table id="table">
+            <tr>
+                <th>Department Name</th>
+                <th>Number of employee</th>
+                <th>totla salary</th>
+                <th>Average salary</th>
+            </tr>
+            <tr id="administration">
+                <td>Administration</td>
+            </tr>
+            <tr id="marketing">
+                <td>Marketing</td>
+            </tr>
+            <tr id="development">
+                <td>Development</td>
+            </tr>
+            <tr id="finance">
+                <td>Finance</td>
+            </tr>
+            <tr id="allDept">
+                <td>All Departments</td>         
+            </tr>
+        </table>
+
+        <script src="./js/accounting.js">
+        </script>
+        
     </main>
 
     <footer>
@@ -38,8 +66,12 @@
         </div>
 
         <div id="copyright">
-            <h3> @CopyRight Mohamad Samara ... </h3>
+            <h3> Copyright © 2023 Samara®. All rights reserved </h3>
         </div>
 </footer>
+    
+        </div>
+</footer>
+
 </body>
 </html>
