@@ -13,7 +13,6 @@ function Employee( fullName , department , level , imageUrl ) {
     this.netSalary = this.netSalary ;
     allEmployee.push(this);
     saveDataLocal(allEmployee);
-    // getDataLocal();
   }
 
   Employee.prototype.calculatSalary = function(){
@@ -85,6 +84,7 @@ function saveDataLocal(empArr) {
         getDataLocal();
     }
 
+
 form.addEventListener("submit", submitHandler);
 function submitHandler(event){
     event.preventDefault();
@@ -102,4 +102,3 @@ for (let i = 0; i < allEmployee.length; i++) {
     allEmployee[i].render();
 }
 
- 
