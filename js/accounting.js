@@ -134,3 +134,6 @@ function info () {
     
 }
 info();
+function arr(){
+    
+}
