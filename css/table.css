@@ -1,0 +1,25 @@
+body {
+        background-color: #6f6f8190 ;
+    }
+
+table {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+th , td {
+        padding: 40px;
+        color: white;
+        border: 1px solid #FFEEBB;
+        font-size: 20px;
+        background: linear-gradient(90deg, grey 0%, black 100%);
+        background: -webkit-linear-gradient(top, #9db7df 0%, #577086 50%);
+    }
+
+th:hover {
+        background: #4e5b8f;
+    }
+
+td:hover {
+        background: #4e5b8f;
+    }

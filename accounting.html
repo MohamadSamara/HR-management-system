@@ -2,37 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/rest.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>accounting Page</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/table.css">
+    <title>Accounting Page</title>
 </head>
 <body>
+
     <header>
-        <ul>
-            <li><a class="active" href="index.html">Home Page</a></li>
-            <li><a href="accounting.html">accounting Page</a></li>
-          </ul>
+        <div id="logo">
+            <img src="./assets/profileLogo.png" alt="profileLogo" height="100px" width="100">
+            <h3>Mohamad Samara</h3>
+        </div>
+
+        <div id="navBar">
+            <ul>
+                <li><a href="./index.html">Home Page</a></li>
+                <li><a href="./accounting.html">Accounting Page</a></li>
+            </ul>
+        </div>
     </header>
 
-    <main>
 
+    <main>
+        <table id="table">
+            <tr>
+                <th>Department Name</th>
+                <th>Number of employee</th>
+                <th>totla salary</th>
+                <th>Average salary</th>
+            </tr>
+            <tr id="administration">
+                <td>Administration</td>
+            </tr>
+            <tr id="marketing">
+                <td>Marketing</td>
+            </tr>
+            <tr id="development">
+                <td>Development</td>
+            </tr>
+            <tr id="finance">
+                <td>Finance</td>
+            </tr>
+            <tr id="allDept">
+                <td>All Departments</td>         
+            </tr>
+        </table>
+
+        <script src="./js/accounting.js">
+        </script>
+        
     </main>
 
     <footer>
-        <div>
-             <ul> Social Media links : 
-                <li>
-                    <a href="#"> Facebook</a>
-                    <a href="#"> | Instagramg</a>
-                    <a href="#"> | Whatsapp</a>
-                </li>
+        <div id="links">
+            <h3>Social Media Links :</h3> 
+            <ul>
+                <li><a href="#">FaceBook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">GitHub</a></li>
             </ul>
-
         </div>
 
-        <p>&copy; Mohamad Samara. All right reserved.</p>
-    </footer>
+        <div id="copyright">
+            <h3> Copyright © 2023 Samara®. All rights reserved </h3>
+        </div>
+</footer>
+    
 </body>
 </html>
