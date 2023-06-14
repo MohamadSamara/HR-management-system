@@ -1,6 +1,7 @@
 body{
   margin: 20px;
   background-color: #ecf6f9;
+
 }
 
 header{
@@ -93,7 +94,15 @@ main section div {
   align-items: center;
   border-radius: 5px;
   box-shadow:6px 6px 15px 5px #146C94;
+
 }
+/* Main - section - div */
+main section{
+  margin: 10px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
 
 main section div img{
   border-radius: 50%;
@@ -126,6 +135,10 @@ footer ul{
   text-decoration: none;
   font-size: larger;
 
+}
+#copyright h3{
+  width: 100%;
+  text-align: center;
 }
 #copyright h3{
   width: 100%;
